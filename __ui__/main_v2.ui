@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>846</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>821</width>
+     <height>771</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_1">
+    <attribute name="title">
+     <string>테이블구조비교</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>801</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="3" column="0" colspan="2">
+       <widget class="QTableWidget" name="tblwTabCmp">
+        <property name="columnCount">
+         <number>7</number>
+        </property>
+        <column>
+         <property name="text">
+          <string>번호</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>My컬럼명</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>My타입</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ora컬럼명</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ora타입</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>컬럼비교</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>타입비교</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>테이블 구조 비교</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="leTabName">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pb_searchTab">
+        <property name="text">
+         <string>테이블 조회</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QTableWidget" name="tblwIndCmp">
+        <column>
+         <property name="text">
+          <string>번호</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>My컬럼명</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>My순서</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ora컬럼명</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ora순서</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>컬럼비교</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>순서비교</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>PK 인덱스 비교</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QTextEdit" name="teIndScript"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QPushButton" name="pb_CreInd">
+        <property name="text">
+         <string>인덱스 재생성</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>스키마구조비교</string>
+    </attribute>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>229</y>
+       <width>821</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item row="1" column="0">
+       <widget class="QTableWidget" name="tblchmdiff">
+        <column>
+         <property name="text">
+          <string>테이블명</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>컬럼명</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>컬럼순서</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>개발컬럼순서</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>개발컬럼타입</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>개발_NN</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>개발기본값</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QA컬럼순서</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QA컬럼타입</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QA_NN</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QA기본값</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>운영컬럼순서</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>운영컬럼타입</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>운영NN</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>운영기본값</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>접속정보</string>
+     </property>
+     <widget class="QRadioButton" name="rb_rdw">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RDW</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rb_adw">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ADW</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pb_scm_diff">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>0</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>스키마 비교</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>DB일일점검</string>
+    </attribute>
+    <widget class="QPushButton" name="pb_dailycheck">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>7</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>일일점검 수행</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teExecLog">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>811</width>
+       <height>681</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_rdw_adw">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RDW,ADW</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_sol">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>솔루션</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_prod">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>운영</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_qadev">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>30</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>QA,개발</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>DB변경작업</string>
+    </attribute>
+    <widget class="QTextEdit" name="teIndScript_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>821</width>
+       <height>251</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teIndScript_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>400</y>
+       <width>811</width>
+       <height>251</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>411</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>반영범위</string>
+     </property>
+     <widget class="QRadioButton" name="rb_rdw_db">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RDW</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rb_adw_db">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>20</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ADW</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_rdw_dev">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>개발</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_rdw_qa">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>QA</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_rdw_prod">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>운영</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_adw_dev">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>개발</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_adw_qa">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>QA</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_adw_prod">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>운영</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pb_db_exec">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>20</y>
+       <width>81</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DB 반영</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>709</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>반영 SQL</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>709</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>반영 결과</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
